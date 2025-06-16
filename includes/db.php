@@ -1,9 +1,9 @@
 <?php
 // Database connection settings
-$servername = "localhost"; // The hostname of the database server
-$username = "root";        // The username to connect to the database
-$password = "";            // The password to connect to the database
-$dbname = "todo_list";     // The name of the database to connect to
+$servername = getenv('DB_HOST');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASS');
+$dbname = getenv('DB_NAME'); // The name of the database to connect to
 
 // Create a new MySQLi object to establish a database connection
 $conn = new mysqli($servername, $username, $password, $dbname);
